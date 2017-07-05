@@ -1,0 +1,19 @@
+{
+  "name": "custom-js-lib",
+  "version": "1.0.0",
+  "description": "this is custom-libs to projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/websterhf18/custom-js-lib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/websterhf18/custom-js-lib/issues"
+  },
+  "homepage": "https://github.com/websterhf18/custom-js-lib#readme"
+}
