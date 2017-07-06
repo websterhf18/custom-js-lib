@@ -40,7 +40,12 @@ var big_image;
     //$('.carousel').carousel({
      //  interval: 3000
      //});
-
+     $(".sliderProductPicker").slick({
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        centermode: false
+      });
      //Activate tags
      //removed class label and label-color from tag span and replaced with data-color
      var tagClass = $('.tagsinput').data('color');
@@ -52,7 +57,7 @@ var big_image;
      if($('.navbar-color-on-scroll').length != 0){
          $(window).on('scroll', materialKit.checkScrollForTransparentNavbar)
      }
-
+     
      if (window_width >= 768){
          big_image = $('.page-header[data-parallax="true"]');
          if(big_image.length != 0){
