@@ -160,6 +160,7 @@ var big_image;
         atvImg();
     },
     initSliderHome: function(){
+        /* Laptop slider settings */
         $('#autoplay-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -170,7 +171,7 @@ var big_image;
             autoplay: !0,
             autoplaySpeed: 4e3
         });
-
+         /* Create t-shirt slider settings */
         $('#center-slider').slick({
             centerMode: true,
             centerPadding: '60px',
@@ -186,7 +187,7 @@ var big_image;
                 {
                     breakpoint: 768,
                     settings: {
-                        arrows: false,
+                        arrows: !0,
                         centerMode: true,
                         centerPadding: '40px',
                         slidesToShow: 1,
@@ -194,10 +195,32 @@ var big_image;
                         variableWidth: true,
                         variableHeight: true
                     }
-                },
+                }
+            ]
+        });
+         /* Create testimonials slider settings */
+        $('#testimonials-slider').slick({
+            centerMode: true,
+            centerPadding: '0',
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: 0,
+            responsive: [
                 {
-                    breakpoint: 480,
-                    settings: "unslick"
+                    breakpoint: 992,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 1,
+                        infinite: true,
+                        variableWidth: true,
+                        variableHeight: true,
+                        arrows: !0,
+                        appendArrows: "#testimonials-slider",
+                        prevArrow: '<a href="javascript:void(0)" class="slick-prev"><i class="material-icons">keyboard_arrow_left</i></a>',
+                        nextArrow: '<a href="javascript:void(0)" class="slick-next"><i class="material-icons">keyboard_arrow_right</i></a>'
+                    }
                 }
             ]
         });
