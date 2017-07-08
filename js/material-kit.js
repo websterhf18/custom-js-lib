@@ -30,9 +30,28 @@ var big_image;
 
      //    Activate bootstrap-select
      if($(".selectpicker").length != 0){
-         $(".selectpicker").selectpicker();
+        $(".selectpicker").selectpicker();
      }
+     function unselectAllElements(){
+        /**$('.content-area .item-design').each(function(){
+            $(this).removeClass('active');
+            $(this).css('border', 0);
 
+            if ($(this).resizable('option', 'disabled') == false)
+                $(this).resizable({ disabled: true, handles: 'e' });
+
+            if ($(this).draggable('option', 'disabled') == false)
+                $(this).draggable({ disabled: true });
+
+            $(this).rotatable("setValue", 0);
+        });**/
+     }
+     //Hide the elements
+     $(document).click(function(e) {
+        //$(".popovertext").hide();
+        //$(".item-design").removeClass('active');
+        unselectAllElements();
+     });
      // Activate Popovers
      //$('[data-toggle="popover"]').popover();
 
@@ -40,12 +59,6 @@ var big_image;
     //$('.carousel').carousel({
      //  interval: 3000
      //});
-     $(".sliderProductPicker").slick({
-        infinite: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        centermode: false
-      });
      //Activate tags
      //removed class label and label-color from tag span and replaced with data-color
      var tagClass = $('.tagsinput').data('color');
@@ -57,7 +70,7 @@ var big_image;
      if($('.navbar-color-on-scroll').length != 0){
          $(window).on('scroll', materialKit.checkScrollForTransparentNavbar)
      }
-     
+
      if (window_width >= 768){
          big_image = $('.page-header[data-parallax="true"]');
          if(big_image.length != 0){
@@ -159,8 +172,15 @@ var big_image;
 
         atvImg();
     },
+    initSliderDesigner: function(){
+        $('#sliderProductID').slick({
+            infinite: false,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            centermode: false
+        });
+    },
     initSliderHome: function(){
-        /* Laptop slider settings */
         $('#autoplay-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -171,7 +191,7 @@ var big_image;
             autoplay: !0,
             autoplaySpeed: 4e3
         });
-         /* Create t-shirt slider settings */
+
         $('#center-slider').slick({
             centerMode: true,
             centerPadding: '60px',
@@ -187,7 +207,7 @@ var big_image;
                 {
                     breakpoint: 768,
                     settings: {
-                        arrows: !0,
+                        arrows: false,
                         centerMode: true,
                         centerPadding: '40px',
                         slidesToShow: 1,
@@ -195,32 +215,10 @@ var big_image;
                         variableWidth: true,
                         variableHeight: true
                     }
-                }
-            ]
-        });
-         /* Create testimonials slider settings */
-        $('#testimonials-slider').slick({
-            centerMode: true,
-            centerPadding: '0',
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            arrows: 0,
-            responsive: [
+                },
                 {
-                    breakpoint: 992,
-                    settings: {
-                        centerMode: true,
-                        centerPadding: '0',
-                        slidesToShow: 1,
-                        infinite: true,
-                        variableWidth: true,
-                        variableHeight: true,
-                        arrows: !0,
-                        appendArrows: "#testimonials-slider",
-                        prevArrow: '<a href="javascript:void(0)" class="slick-prev"><i class="material-icons">keyboard_arrow_left</i></a>',
-                        nextArrow: '<a href="javascript:void(0)" class="slick-next"><i class="material-icons">keyboard_arrow_right</i></a>'
-                    }
+                    breakpoint: 480,
+                    settings: "unslick"
                 }
             ]
         });
