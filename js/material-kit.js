@@ -249,6 +249,43 @@ var big_image;
             ]
         });
     },
+    initSliderProducts: function(){
+        $('.product-selector li a').click(function(e){
+            e.preventDefault();
+            $('.selected-product').html( $(this).html() + ' <b class="caret"></b>');
+        });
+
+        $('.colors-filter li a').click(function(e){
+            e.preventDefault();
+            $('.colors-filter li a').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        /* Create related products slider settings */
+        $('#related-products-slider').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            arrows: 0,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 1,
+                        infinite: true,
+                        variableWidth: true,
+                        variableHeight: true,
+                        arrows: !0,
+                        appendArrows: "#related-products-slider",
+                        prevArrow: '<a href="javascript:void(0)" class="slick-prev"><i class="material-icons">keyboard_arrow_left</i></a>',
+                        nextArrow: '<a href="javascript:void(0)" class="slick-next"><i class="material-icons">keyboard_arrow_right</i></a>'
+                    }
+                }
+            ]
+        });
+    },
     initColoredShadows: function(){
         if(materialKit.misc.colored_shadows == true){
 
