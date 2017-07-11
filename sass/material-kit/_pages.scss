@@ -1,0 +1,12 @@
+.main{
+    background: #FFFFFF;
+    position: relative;
+    z-index: 3;
+
+}
+
+.main-raised{
+    margin: -60px 30px 0px;
+    border-radius: $border-radius-base * 2;
+    @include shadow-16dp();
+}

@@ -1,0 +1,10 @@
+img {
+	max-width: 100%;
+}
+
+.img-thumbnail{
+    border-radius: 16px;
+}
+.img-raised{
+    @include shadow-big-image();
+}
