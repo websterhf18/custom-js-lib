@@ -4,6 +4,8 @@
         overflow: hidden;
 
         .container{
+            margin-top: -50px;
+
             .header-title{
                 font-weight: 700;
             }
@@ -13,7 +15,46 @@
                     display: block;
                 }
             }
+
+            .card-cta{
+                margin-top: 20px;
+                margin-bottom: 15px;
+                width: 485px;
+                border-radius: 33px;
+
+                .card-content{
+                    padding: 0 0 0 30px;
+
+                    .form-group{
+                        margin: 11px 0 0 0;
+
+                        .form-control{
+                            font-size: $font-paragraph;
+                            background: none;
+                        }
+                    }
+                    
+                    .header-cta-btn{
+                        padding: 20px;
+                        border-radius: 0 33px 33px 0;
+                        font-size: $font-paragraph;
+                        margin-left: 1px;
+                    }
+                }
+            }
+
+            .cta-sub{
+                margin: 0;
+
+                .emoji{
+                    margin: 0 5px;
+                }
+            }            
         }
+    }
+
+    .main-raised{
+        margin: -160px 30px 0px;
     }
 
     .header-filter:after{
@@ -39,10 +80,10 @@
                 display: block;
                 background: #fff;
                 position: absolute;
-                left: 101px;
-                right: 102px;
+                left: 100px;
+                right: 101px;
                 top: 27px;
-                bottom: 45px;
+                bottom: 44px;
                 overflow: hidden;
             }
 
@@ -222,6 +263,32 @@
 
 @media (max-width: 992px){
     .home{
+
+        .page-header{
+            .container{
+                .card-cta{
+                    margin-top: 20px;
+                    width: 80%;
+                    background: none;
+
+                    .card-content{
+                        padding: 0;
+
+                        .form-group{
+                            display: none;
+                        }
+                        
+                        .header-cta-btn{
+                            padding: 20px;
+                            border-radius: 33px;
+                            font-size: $font-paragraph;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
         .section-testimonials{
             .container{
                 width: 100%;
@@ -294,6 +361,7 @@
 
             .container{
                 padding-top: 0;
+                margin-top: 0;
 
                 >.row{
                     margin-top: -100px;

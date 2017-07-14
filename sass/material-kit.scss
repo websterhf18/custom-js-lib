@@ -7,7 +7,7 @@
  * Copyright 2017 Jolly Joker (https://jollyjoker.co)
  *
  * ========================================================= */
-
+@import 'bootstrap.min.css';
 @import 'material-kit/variables';
 @import 'material-kit/mixins';
 @import 'material-kit/shadows';
@@ -63,5 +63,8 @@
 @import 'material-kit/pages/home';
 @import 'material-kit/pages/shop';
 @import 'material-kit/pages/product';
+@import 'material-kit/pages/checkout';
+@import 'material-kit/pages/login';
+@import 'material-kit/pages/register';
 
 @import 'material-kit/responsive';

@@ -1,0 +1,83 @@
+.login{
+    .navbar-transparent{
+        padding-top: 25px;
+    }
+
+    .page-header{
+        min-height: 100vh;
+        height: auto;
+
+        .container{
+            padding-top: 15vh;
+        }
+    }
+
+    .card-signup{
+        @include shadow-16dp();
+        margin-bottom: 60px;
+        padding: 40px 0px;
+
+        .card-title{
+            margin: 0 0 5px 0;
+        }
+
+        .card-subtitle-small{
+            padding: 0 70px;
+        }
+
+        .card-content{
+            margin: 20px 0;
+        }
+
+        .recover-link{
+            margin: 10px 0 25px 0 ;
+        }
+
+        .signup-link{
+            margin: 25px 0 ;
+        }
+    }
+
+    .footer{
+        .container{
+            padding: 0;
+        }
+        .copyright,
+        a{
+            color: $white-color;
+        }
+    }
+}
+
+
+@media (max-width: $screen-sm-max){
+    .login{
+        .page-header{
+            .container{
+                padding-top: 16vh;
+            }
+        }
+
+        .navbar {
+            .navbar-brand {
+                float: none;
+
+                img{
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .card-signup{
+            padding: 20px 15px;
+
+            .card-subtitle-small{
+                padding: 0;
+            }
+        }
+
+        .signup-disclaimer{
+            margin-bottom: 0;
+        }
+    }
+}
