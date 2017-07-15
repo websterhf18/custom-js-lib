@@ -1,0 +1,82 @@
+.dashboard{
+    .main-panel{
+        >.content{
+            margin-top: 40px;
+        }
+    }
+    
+    #introduction{
+        margin-top: 20px;
+        border-bottom: 1px solid #DDDDDD;
+    }
+
+    .first-steps{
+
+        .table{
+            >tbody{
+                >tr{
+                    >td{
+                        padding: 10px 8px;
+                    }
+                }
+            }
+        }
+
+        .steps{
+            display: block;
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            font-weight: 500;
+            background: #ebf1f2;
+            border-radius: $border-radius-extreme;
+        }
+
+        .first-steps-title{
+            font-size: 1.25em;
+            font-weight: 500;
+        }
+
+        .first-steps-subtitle{
+            font-size: 1.15em;
+        }
+
+        .first-steps-btn{
+            font-size: 14px;
+            padding: 12px 18px;
+            min-width: 215px;
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .dashboard {
+        .first-steps{
+            .steps{
+                margin: 0 auto;
+            }
+
+            .table{
+                >tbody{
+                    >tr{
+                        display: block;
+                        margin: 10px 0;
+                        padding: 10px 0;
+                        border-top: 1px solid #ededed;
+
+                        &:first-child{
+                            border-top: none;
+                        }
+
+                        >td{
+                            padding: 10px 8px;
+                            display: block;
+                            text-align: center;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
