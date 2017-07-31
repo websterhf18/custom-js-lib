@@ -48,7 +48,7 @@ var mobile_menu_visible = 0,
 var seq = 0, delays = 80, durations = 500;
 var seq2 = 0, delays2 = 80, durations2 = 500;
 
-
+(function($){
 $(document).ready(function(){
 
     $sidebar = $('.sidebar');
@@ -496,3 +496,4 @@ function debounce(func, wait, immediate) {
 		if (immediate && !timeout) func.apply(context, args);
 	};
 };
+})(jQuery); 

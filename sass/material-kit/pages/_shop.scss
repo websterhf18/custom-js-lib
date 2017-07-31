@@ -1,4 +1,4 @@
-.shop{
+&.shop{
     .navbar{
         .navbar-nav{
             >li{
@@ -253,7 +253,7 @@
 
 
 @media (max-width: $screen-sm-max){
-    .shop{
+    &.shop{
         .navbar{
             .navbar-toggle{
                 display: none !important;

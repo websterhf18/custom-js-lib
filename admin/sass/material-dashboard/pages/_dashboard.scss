@@ -1,4 +1,4 @@
-.dashboard{
+&.dashboard{
     .main-panel{
         >.content{
             margin-top: 40px;
@@ -50,7 +50,7 @@
 }
 
 @media (max-width: 991px){
-    .dashboard {
+    &.dashboard {
         .first-steps{
             .steps{
                 margin: 0 auto;

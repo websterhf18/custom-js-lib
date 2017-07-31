@@ -1,4 +1,4 @@
-.home{
+&.home{
     .page-header{
         height: 90vh;
         overflow: hidden;
@@ -262,8 +262,7 @@
 }
 
 @media (max-width: 992px){
-    .home{
-
+    &.home{
         .page-header{
             .container{
                 .card-cta{
@@ -354,7 +353,7 @@
 }
 
 @media (max-width: $screen-sm-max){
-    .home{
+    &.home{
         .page-header{
             height: 100vh;
             overflow: hidden;
@@ -483,7 +482,7 @@
 }
 
 @media (max-width: 320px){
-    .home{
+    &.home{
         .section-create{
             .features-slider{
                 .slick-slide{

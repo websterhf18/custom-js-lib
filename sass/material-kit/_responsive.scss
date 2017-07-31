@@ -112,7 +112,7 @@
 
 }
 @media (max-width: $screen-xs-max){
-    body {
+    app-root {
         font-size: $font-size-small;
     }
 
@@ -357,7 +357,7 @@
 }
 
 @media (max-width: 320px){
-    body{
+    app-root{
         font-size: 10px;
     }
 }
