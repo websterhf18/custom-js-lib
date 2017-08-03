@@ -1,4 +1,4 @@
-.register{
+&.register{
     .navbar-transparent{
         padding-top: 25px;
     }
@@ -51,7 +51,7 @@
 
 
 @media (max-width: $screen-sm-max){
-    .register{
+    &.register{
         .page-header{
             .container{
                 padding-top: 16vh;

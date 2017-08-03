@@ -500,3 +500,63 @@
         color: $color;
     }
 }
+
+@mixin scrolling-shadow($bg-color) {
+  background:
+    linear-gradient($bg-color 30%, rgba(255,255,255,0)),
+    linear-gradient(rgba(255,255,255,0), $bg-color 70%) 0 100%,
+    radial-gradient(50% 0, farthest-side, rgba(0,0,0,.1), rgba(0,0,0,0)),
+    radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.1), rgba(0,0,0,0)) 0 100%;
+  background:
+    linear-gradient($bg-color 30%, rgba(255,255,255,0)),
+    linear-gradient(rgba(255,255,255,0), $bg-color 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.1), rgba(0,0,0,0)),
+    radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.1), rgba(0,0,0,0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: $bg-color;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+@mixin set-wizard-color($color) {
+    .moving-tab{
+        background-color: $color;
+        @include shadow-big-color($color);
+    }
+
+    .picture{
+        &:hover{
+            border-color: $color;
+        }
+    }
+
+    .choice{
+        &:hover,
+        &.active{
+            .icon{
+                border-color: $color;
+                color: $color;
+            }
+        }
+    }
+
+    .form-group{
+        .form-control{
+            background-image: linear-gradient($color, $color), linear-gradient($mdb-input-underline-color, $mdb-input-underline-color);
+        }
+    }
+
+    .checkbox input[type=checkbox]:checked + .checkbox-material{
+        .check{
+            background-color: $color;
+        }
+    }
+
+    .radio input[type=radio]:checked ~ .check {
+        background-color: $color;
+    }
+
+    .radio input[type=radio]:checked ~ .circle {
+        border-color: $color;
+    }
+}
