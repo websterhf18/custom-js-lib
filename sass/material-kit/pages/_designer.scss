@@ -32,6 +32,8 @@
 
     /* --- <DESIGNER CARDS TWEAKS --- */
     .panel-card{
+        margin-bottom: 0;
+
         .card-content{
             padding: 15px !important;
 
@@ -227,8 +229,8 @@
 
     .select-product-helper{
         position: absolute;
-        bottom: -20px;
-        right: -75px;
+        bottom: 10px;
+        right: -100px;
 
         img{
             width: 91px;
@@ -249,6 +251,10 @@
             border: 2px dashed rgba(0,0,0,0.2);
             position: absolute;
             overflow: hidden;
+
+            &.no-border{
+                border: 2px solid transparent;
+            }
 
             .content-area{
                 float: left;
@@ -286,12 +292,12 @@
         position: relative;
 
         .design-area{
-            height: 400px;
-            width: 270px;
-            left: 180px;
-            top: 170px;
+            height: 60%;
+            width: 42%;
+            left: 29%;
+            top: 28.5%;
             border: 2px dashed rgba(0,0,0,0.2);
-            position: absolute; 
+            position: absolute;
             overflow: hidden;
 
             .content-area{
@@ -399,6 +405,7 @@
         padding: 5px 10px 10px;
 
         .bg-colors{
+            position: relative;
             display: block;
             border-radius: $border-radius-extreme;
             height: 35px;
@@ -414,10 +421,10 @@
                     font-family: FontAwesome;
                     content: "\f00c";
                     font-size: 25px;
-                    line-height: 25px;
+                    line-height: 35px;
                     width: 35px;
                     height: 35px;
-                    padding: 5px;
+                    text-align: center;
                     color: #8a8a8a;
                     position: absolute;
                 }
@@ -812,6 +819,325 @@
     /* --- MODAL ADD ART/> --- */
 
 
+    /* --- <STEP TWO SET PRICES --- */
+    .product-variation__list{
+        max-height: 630px;
+        overflow-y: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        @include scrolling-shadow($white-color);
+
+        .product-variation{
+            border: 1px solid $table-border-color;
+            border-radius: $border-radius-large;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: rgba(133, 216, 253, 0.1);
+            }
+
+            &.active{
+                border-color: $brand-info;
+                background-color: rgba(133, 216, 253, 0.2);
+            }
+
+            &:first-child{
+                margin-top: 0;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            .product-variation__row{
+                display: flex;
+            }
+
+            .product-variation__col{
+                padding: 5px 15px;
+                position: relative;
+            }
+
+            .form-group{
+                margin: 5px 0 0 0;
+
+                .form-control,
+                .form-control-static{
+                    font-size: 18px;
+                    font-weight: $font-weight-default;
+                    color: $gray;
+                }
+
+                .product-info-btn{
+                    i{
+                        font-size: 16px;
+                    }
+                }
+
+                span{
+                    font-weight: $font-weight-default;
+                }
+            }
+
+            .product-variation__thumb{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 96px;
+                height: 100%;
+            }
+
+            .product-variation__title{
+                h4{
+                    font-weight: $font-weight-bold;
+                    color: $black-color;
+                }
+            }
+
+            .product-variation__price-sellfor{
+                width: 50%;
+
+                .input-sellfor{
+                    border-radius: $border-radius-base;
+                    border: 1px solid $table-border-color;
+                    margin-top: 5px;
+                    background: $white-color;
+                    width: 118px;
+                    @include transition($fast-transition-time, $transition-linear);
+
+                    input{
+                        margin-bottom: 0;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        background: none;
+                    }
+                }
+
+                .form-group.is-focused{
+                    .input-sellfor{
+                        border: 1px solid $brand-info;
+                    }
+                }
+            }
+
+            .product-variation__minpriceprofit{
+                display: flex;
+
+                .product-variation__price-minprice,
+                .product-variation__price-profit{
+                    width: 50%;
+                }
+            }
+
+            .row-pick-colors{
+                border-top: 1px solid $table-border-color;
+            }
+
+            .product-variation__pick-colors{
+                .pick-colors-title{
+                    display: block;
+                }
+
+                .productlist-colors{
+                    padding: 5px 0 0;
+
+                    .bg-colors{
+                        height: 25px;
+                        width: 25px;
+
+                        &.active{
+                            &:before{
+                                font-size: 20px;
+                                line-height: 25px;
+                                width: 25px;
+                                height: 25px;
+                                text-align: center;
+                            }
+                        }
+
+                        a{
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+
+            .remove-variation-btn{
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+    }
+
+    .product-variation-pick{
+        .product-variation-pick__list{
+            display: inline-block;
+            width: 100%;
+
+            .product-variation-pick__item{
+                display: inline-block;
+                padding: 5px;
+                width: 33.33333333%;
+                width: calc(100% / 3);
+                float: left;
+                min-height: 186px;
+                margin-top: 0;
+                margin-bottom: 10px;
+
+                .card-image{
+                    .colored-shadow{
+                        display: none;
+                    }
+                }
+
+                .card-content{
+                    padding: 0;
+
+                   .card-title{
+                        font-size: $font-size-small;
+                    }
+                }
+            }
+        }
+    }
+
+    .add-product-variation{
+        display: block;
+
+        .add-product-variation__containerlink{
+            display: block;
+            padding: 20px;
+            text-align: center;
+            border: 2px dashed $table-border-color;
+            border-radius: $border-radius-base;
+            @include transition($fast-transition-time, $transition-linear);
+
+            .add-product-variation__title{
+                text-decoration: underline;
+            }
+
+            .add-product-variation__title,
+            .add-product-variation__description{
+                display: block;
+                @include transition($fast-transition-time, $transition-linear);
+            }
+
+            &:hover{
+                border: 2px dashed rgba(41, 182, 246, 1);
+
+                .add-product-variation__title,
+                .add-product-variation__description{
+                    color: rgba(41, 182, 246, 1);
+                }
+            }
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    .btn-step-two{
+        margin-top: 35px;
+    }
+    /* --- STEP TWO SET PRICES/> --- */
+
+
+    /* --- <STEP THREE REVIEW --- */
+    .publishProductForm{
+        .form-group{
+            padding-bottom: 0;
+            margin: 0;
+
+            h5{
+                margin: 0;
+                line-height: 1.1625em;
+            }
+
+            label.control-label{
+                font-size: $font-size-h5;
+                line-height: 1.55em;
+                color: $black-color;
+                font-weight: $font-weight-bold;
+                margin: 10px 0 0 0;
+            }
+
+            .form-control{
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: $border-radius-base;
+                border: 1px solid $table-border-color;
+                background: $white-color;
+                @include transition($fast-transition-time, $transition-linear);
+            }
+
+            &.is-focused{
+                .form-control{
+                    border-color: $brand-info;
+                }
+            }
+
+            &.has-error{
+                .form-control{
+                    border-color: $brand-danger;
+                }
+            }
+
+            &.has-success{
+                .form-control{
+                    border-color: $brand-success;
+                }
+            }
+
+            textarea{
+                height: 100px;
+            }
+
+            .bootstrap-select{
+                margin-bottom: 15px;
+
+                .dropdown-toggle{
+                    text-transform: none;
+                    padding: 12px 15px;
+                }
+            }
+
+            .category-arrow{
+                position: absolute;
+                right: -25px;
+                top: 20px;
+                font-size: 18px;
+            }
+
+            .set-url-input-group{
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                .input-group-addon{
+                    border: 1px solid $table-border-color;
+                    background: $gray-lighter;
+                    padding: 0 15px 0px;
+                }
+
+                .form-control{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    border-left: 0;
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 0;
+                }
+            }
+        }
+    }
+
+    .btn-step-three{
+        margin-top: 35px;
+    }
+    /* --- STEP THREE REVIEW/> --- */
+
 
     /* --- <FOOTER --- */
     .footer{
@@ -828,7 +1154,7 @@
 }
 
 @media (max-width: $screen-xs-max){
-    &.designer{
+    .designer{
 
         /* --- <MOBILE TWEAKS --- */
         .navbar{
