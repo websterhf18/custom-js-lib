@@ -67,8 +67,8 @@ header{
     top: 0;
 }
 
-.sidebar,
-.off-canvas-sidebar{
+div.sidebar,
+div.off-canvas-sidebar{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -502,7 +502,7 @@ header{
     }
 }
 
-.off-canvas-sidebar{
+&.off-canvas-sidebar{
     .nav {
         > li > a,
         > li > a:hover{
@@ -515,7 +515,7 @@ header{
     }
 }
 
-.main-panel{
+>.main-panel{
     position: relative;
     float: right;
     overflow: auto;
@@ -621,13 +621,13 @@ header{
 .background-night{
     background: url('assets/dashboard-bg-night.jpg');
 }
-.main-panel{
+&.main-panel{
     max-height: 100%;
     height: 100%;
 }
-.sidebar,
-.main-panel,
-.sidebar-wrapper{
+&.sidebar,
+&.main-panel,
+&.sidebar-wrapper{
     -webkit-transition-property: top,bottom,width;
     transition-property: top,bottom, width;
     -webkit-transition-duration: .2s,.2s, .35s;
@@ -638,8 +638,8 @@ header{
 }
 
 // windows os settings for perfect scrollbar off
-.sidebar .sidebar-wrapper,
-.main-panel{
+&.sidebar .sidebar-wrapper,
+&.main-panel{
     .perfect-scrollbar-on &,
     &{
         overflow: hidden;
