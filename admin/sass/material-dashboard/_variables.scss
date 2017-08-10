@@ -22,7 +22,7 @@ $mdb-label-color-toggle-focus: unquote("rgba(#{$rgb-black}, .54)") !default;
 $white-color: #FFFFFF !default;
 
 $white-transparent: rgba($white-color, .8);
-
+$gray-ultra-light: #ebf1f2 !default;
 $gray-color:  #666e75 !default;
 
 $brand-default: #cecece !default;
@@ -1068,7 +1068,7 @@ $mdb-btn-fab-font-size: 24px !default;
 $mdb-btn-icon-size: 32px !default;
 $mdb-btn-icon-size-mini: 17px !default;
 
-// SHADOWS 
+// SHADOWS
 $mdb-shadow-key-umbra-opacity: 0.2 !default;
 $mdb-shadow-key-penumbra-opacity: 0.14 !default;
 $mdb-shadow-ambient-shadow-opacity: 0.12 !default;

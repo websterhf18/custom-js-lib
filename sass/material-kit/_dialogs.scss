@@ -8,6 +8,7 @@
   @include shadow-z-5();
   border-radius: $border-radius-large;
   border: none;
+
   // Modal header
   // Top section of the modal w/ title and dismiss
   .modal-header {
@@ -16,11 +17,27 @@
     padding-right:  24px;
     padding-bottom: 0;
     padding-left:   24px;
+
+    .close{
+        position: absolute;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: $gray-lighter;
+        color: $black-color;
+        @include transition($fast-transition-time, $transition-linear);
+
+        i{
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
   }
   // Modal body
   // Where all modal content resides (sibling of .modal-header and .modal-footer)
   .modal-body {
-    padding-top:    24px;
+    padding-top:    12px;
     padding-right:  24px;
     padding-bottom: 16px;
     padding-left:   24px;
@@ -53,6 +70,25 @@
   .modal-body + .modal-footer {
     padding-top: 0;
   }
+
+  &.modal-dark{
+    background-color: rgba(58, 58, 60, 0.98);
+
+    .modal-header {
+      .close{
+        background-color: $gray-ultra-light;
+        color: $black-color;
+      }
+
+      .modal-title{
+          color: $white-color;
+      }
+    }
+
+    .modal-body{
+      color: $white-color;
+    }
+  }
 }
 .modal-backdrop {
   background: rgba(0,0,0,0.3);
@@ -64,14 +100,6 @@
 
         &.modal-login{
             width: 360px;
-
-            .modal-header{
-                .close{
-                    margin-top: -30px;
-                    margin-right: 10px;
-                    color: $white-color;
-                }
-            }
 
             .modal-footer{
                 padding-bottom: 0;
@@ -151,4 +179,12 @@
     .modal-body{
         margin-top: 20px;
     }
+}
+
+@media (max-width: $screen-xs-max){
+  .modal{
+    .modal-dialog{
+      margin-top: 50px;
+    }
+  }
 }

@@ -53,7 +53,7 @@
 @import "material-dashboard/plugins/chartist";
 @import "material-dashboard/plugins/select-bootstrap";
 @import "material-dashboard/plugins/perfect-scrollbar";
-
+@import '../../sass/material-kit/plugins/_plugin-slick';
 
 // Core CSS
 @import "material-dashboard/typography";
@@ -93,3 +93,5 @@
 @import "material-dashboard/cards";
 @import "material-dashboard/tabs";
 @import "material-dashboard/responsive";
+
+@import "material-dashboard/admin-toolbar";
