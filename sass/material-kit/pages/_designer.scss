@@ -21,6 +21,10 @@
     }
     /* --- HEADER AND NAVBAR/> --- */
 
+    // --- WIZZARD ---
+    .wizard-card .tab-content {
+        padding: 20px 30px;
+    }
 
     /* --- <HIDE MOBILE DESIGNER --- */
     .mobile-designer-row,
@@ -35,7 +39,7 @@
         margin-bottom: 0;
 
         .card-content{
-            padding: 15px !important;
+            // padding: 15px !important;
 
             .card-title{
                 margin-bottom: 5px;
@@ -115,8 +119,8 @@
                     font-weight: $font-weight-default;
                 }
             }
-            width: 100px !important;
-            height: 155px !important;
+            // width: 100px !important;
+            // height: 155px !important;
             &.active{
                 box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
             }
@@ -240,22 +244,41 @@
     }
     /* --- LEFT PANEL/> --- */
 
+    #SVGFront, #SVGBack, #SVGFrontS3, #SVGFront{
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+
     /* --- <PRODUCT PANEL --- */
     .view-front{
-        width: 615px;
-        height: 615px;
+        // width: 615px;
+        // height: 615px;
         position: relative;
         .design-area{
-            height: 390px;
-            width: 280px;
-            left: 28%;
-            top: 26.5%;
-            border: 2px dashed rgba(0,0,0,0.2);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
             position: absolute;
-            overflow: hidden;
-
+            .print-area {
+                height: 60%;
+                width: 42%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 27.5%;
+                border: 2px dashed rgba(0, 0, 0, 0.2);
+                position: absolute;
+            }
             &.no-border{
                 border: 2px solid transparent;
+
             }
 
             .content-area{
@@ -265,7 +288,6 @@
                 left: 0;
                 position: absolute;
                 width: 100%;
-                overflow: hidden;
             }
 
             .content-helper{
@@ -291,25 +313,33 @@
     }
 
     .view-back{
-        width: 615px;
-        height: 615px;
+        // width: 615px;
+        // height: 615px;
         position: relative;
 
         .design-area{
-            height: 390px;
-            width: 280px;
-            left: 28%;
-            top: 15.5%;
-            border: 2px dashed rgba(0,0,0,0.2);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
             position: absolute;
-            overflow: hidden;
-
+            .print-area {
+                height: 60%;
+                width: 42%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 17.5%;
+                border: 2px dashed rgba(0, 0, 0, 0.2);
+                position: absolute;
+            }
             .content-area{
                 float: left;
                 height: 100%;
                 position: relative;
                 width: 100%;
-                overflow: hidden;
             }
 
             .content-helper{
@@ -403,6 +433,11 @@
             }
         }
     }
+
+    // .product-design {
+    //     max-width: 550px;
+    //     margin: auto;
+    // }
 
     .productlist-colors{
         display: inline-block;
@@ -1158,7 +1193,15 @@
 }
 
 @media (max-width: $screen-xs-max){
-    .designer{
+    &.designer{
+
+        // Mateo custom styles
+        #captain {
+            padding: 0 15px;
+        }
+        #description {
+            padding: 0 15px;
+        }
 
         /* --- <MOBILE TWEAKS --- */
         .navbar{
@@ -1260,7 +1303,15 @@
 
         /* --- <PRODUCT PANEL --- */
         .view-front{
-            margin: 50px -55px 0;
+            margin: 55px -55px 0;
+            // .design-area{
+            //     .print-area {
+            //         height: 60%;
+            //         width: 45%;
+            //     }
+        }
+        .view-back {
+            margin: 55px -55px 0;
         }
         /* --- PRODUCT PANEL/> --- */
 
@@ -1673,10 +1724,15 @@
                     padding: 0;
 
                     li{
-                        display: inline-block;
+                        display: flex;
                         padding: 8px;
                         width: 50%;
                         float: left;
+                        height: 100px;
+                        border: 1px solid #eee;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
 
                         a{
                             display: block;
