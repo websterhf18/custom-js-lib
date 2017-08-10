@@ -1,9 +1,17 @@
-.navbar-transparent{
-	.cart-modal{
-		top: 220px;
+&.shop{	
+	.navbar-transparent{
+		.cart-modal{
+			top: 220px;
+		}
 	}
 }
-
+&.product{
+	.navbar-transparent{
+		.cart-modal{
+			top: 85px;
+		}
+	}
+}
 .cart-modal{
 	position: absolute;
 	top: 20px;
