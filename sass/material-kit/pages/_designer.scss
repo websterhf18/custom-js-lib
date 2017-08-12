@@ -280,16 +280,16 @@
                 border: 2px solid transparent;
 
             }
-
             .content-area{
-                float: left;
-                height: 100%;
-                top: 0;
-                left: 0;
-                position: absolute;
-                width: 100%;
+                position: relative;
+                margin:0 auto;
+                top: 27.5%;
             }
-
+            .canvas-container{
+                position: relative;
+                margin:0 auto;
+                top: 27.5%;
+            }
             .content-helper{
                 overflow: hidden;
                 height: 100%;
