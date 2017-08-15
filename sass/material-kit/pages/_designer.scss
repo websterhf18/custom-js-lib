@@ -345,10 +345,14 @@
                 position: absolute;
             }
             .content-area{
-                float: left;
-                height: 100%;
                 position: relative;
-                width: 100%;
+                margin:0 auto;
+                top: 17.5%;
+            }
+            .canvas-container{
+                position: relative;
+                margin:0 auto;
+                top: 17.5%;
             }
 
             .content-helper{
