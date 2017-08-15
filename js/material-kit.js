@@ -24,7 +24,11 @@ var big_image;
     scroll_distance = $navbar.attr('color-on-scroll') || 500;
 
     $navbar_collapse = $('.navbar').find('.navbar-collapse');
-
+    
+    $(".noclick").click(function (e) {
+        e.preventDefault();
+        return false;
+    });
     //  Activate the Tooltips
     $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
 
