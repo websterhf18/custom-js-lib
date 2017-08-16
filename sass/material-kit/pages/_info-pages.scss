@@ -1,0 +1,291 @@
+.info-pages{
+    .page-header{
+        &.header-small{
+            height: 45vh;
+            min-height: 45vh;
+        }
+
+        .title{
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: $font-weight-default;
+            font-size: 3.4em;
+
+            i{
+                font-size: 42px;
+                line-height: inherit;
+                vertical-align: text-bottom;
+            }
+        }
+    }
+
+    .fixed-section-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .fixed-section{
+        position: sticky;
+        overflow-y: auto;
+        top: 90px;
+        max-height: 620px;
+        width: 100%;
+        @include scrolling-shadow($white-color);
+
+        h6{
+            display: inline-block;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 5px;
+
+            i{
+                font-size: 16px;
+                vertical-align: text-bottom;
+                color: $gray-light;
+                margin-right: 2px;
+            }
+        }
+
+        ul{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            &::after{
+                display: block;
+                content: "";
+                clear: both;
+            }
+
+            li{
+                list-style: none;
+                margin: 5px 0;
+                width: 100%;
+
+                a{
+                    padding: 0;
+                    font-size: $font-size-base;
+                    color: $gray;
+                    @include transition($fast-transition-time, $transition-linear);
+
+                    &:hover,
+                    &:focus{
+                        color: $brand-info;
+                        background: none;
+                    }
+                }
+
+                &.active{
+                    a{
+                        color: $brand-info;
+                    }
+                }
+            }
+        }
+
+        &.float{
+            position: fixed;
+            top: 100px;
+            width: 200px;
+            margin-top: 0;
+        }
+    }
+
+    .info-row{
+        padding-top: 40px;
+        margin-bottom: 20px;
+
+        &.info-row-first{
+            padding-top: 0;
+
+            h2{
+                margin-top: 0;
+            }
+        }
+    }
+
+    .info-spacer{
+        height: 20px;
+    }
+
+    .info-spacer-x2{
+        height: 40px;
+    }
+
+    .info-spacer,
+    .info-spacer-x2{
+        &::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+
+    .info-image-container{
+        &.info-image-margin-x{
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+    }
+
+    .info{
+        padding: 20px 0;
+
+        .info-title{
+            margin-bottom: 5px;
+            font-weight: $font-weight-default;
+        }
+
+        .description{
+            color: inherit;
+        }
+
+        p{
+            color: inherit;
+        }
+    }
+
+    .info-horizontal{
+        padding: 5px 0;
+    }
+
+    .info-card{
+        margin-bottom: 0;
+    }
+
+    .how-it-works-step{
+        .how-it-works-step-image{
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 40px;
+
+            .step-container{
+                position: absolute;
+                display: block;
+                width: 100%;
+                bottom: -32px;
+            }
+
+            .step{
+                margin: 0 auto;
+                width: 64px;
+                height: 64px;
+                line-height: 64px;
+                background: $brand-info;
+                border-radius: 32px;
+                color: $white-color;
+                font-weight: $font-weight-bold;
+                font-size: 24px;
+                text-align: center;
+                box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .step-description{
+            margin: 0 40px;
+        }
+    }
+
+    .card-how-create-step{
+        margin-bottom: 0;
+
+        .step-number{
+            display: inline-block;
+            height: 100%;
+            margin-top: 10px;
+            margin-right: 4px;
+
+            .step{
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                text-align: center;
+                color: $white-color;
+                background-color: $brand-info;
+                border-radius: 12px;
+                font-size: 12px;
+                font-weight: $font-weight-bold;                
+            }
+        }
+
+        .step-title{
+            display: inline-block;
+            line-height: 1;
+            margin-top: 0;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+    }
+
+    .card-integral-platform{
+        margin-bottom: 0;
+    }
+
+    .section-story-overview-desktop{
+        .image-container{
+            height: 230px;
+            position: relative;
+
+            &.image-left{
+                img{
+                    z-index: 1;
+                }
+            }
+
+            &.image-right{
+                top: 80px;
+                margin-left: -100px;
+                margin-bottom: 140px;
+
+                img{
+                    z-index: 2;
+                }
+            }
+
+            img{
+                width: 100%;
+                left: 0;
+                top: 0;
+                height: auto;
+                position: absolute;
+            }
+
+            &:nth-child(2){
+                margin-top: 270px;
+            }
+        }
+
+        blockquote{
+            position: absolute;
+            top: 280px;
+            width: 290px;
+            min-height: 180px;
+            z-index: 0;
+            text-align: left;
+        }
+    }
+
+    .section-story-overview-mobile{
+        display: none;
+    }
+}
+
+@media (max-width: $screen-sm-max){
+    .info-pages{
+        .info-section{
+            padding: 30px 0;
+        }
+
+        .fixed-section-container{
+            display: none;
+        }
+
+        .section-story-overview-desktop{
+            display: none;
+        }
+
+        .section-story-overview-mobile{
+            display: block;
+        }
+    }
+}

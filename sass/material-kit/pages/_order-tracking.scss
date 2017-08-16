@@ -1,0 +1,131 @@
+.order-tracking{
+    .page-header{
+        min-height: 52vh;
+        height: auto;
+        background-position: top center;
+
+        .container{
+            padding-top: 10vh;
+        }
+    }
+
+    .main-raised{
+        margin: -40vh 0px 0;
+        padding: 10px 40px;
+    }
+
+    .main-title{
+        font-size: $font-size-h2;
+        margin-top: 40px;
+    }
+
+    .order-status{
+        padding: 0 20px;
+
+        .order-status-info{
+            padding: 20px 10px;
+            background: $gray-ultra-light;
+            border-radius: $border-radius-base;
+            font-weight: $font-weight-default;
+        }
+    }
+
+    .track-order-container{
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .track-order{
+        width: 960px;
+        height: 308px;
+        margin: 0 auto;
+        font-size: 0;
+        line-height: 0;
+
+        .state{
+            width: 160px;
+            height: 308px;
+            display: inline-block;
+            background-size: 100% 100% !important;
+        }
+
+        .order-received{
+            background: url('/assets/img/order-tracking/track-order-01.png') no-repeat center;
+        }
+
+        .design-check{
+            background: url('/assets/img/order-tracking/track-order-02.png') no-repeat center;
+        }
+
+        .production{
+            background: url('/assets/img/order-tracking/track-order-03.png') no-repeat center;
+        }
+
+        .quality-control{
+            background: url('/assets/img/order-tracking/track-order-04.png') no-repeat center;
+        }
+
+        .shipping-order{
+            background: url('/assets/img/order-tracking/track-order-05.png') no-repeat center;
+        }
+
+        .order-delivered{
+            background: url('/assets/img/order-tracking/track-order-06.png') no-repeat center;
+        }
+
+        .order-received.active{
+            background: url('/assets/img/order-tracking/track-order-active-01.png') no-repeat center;
+        }
+
+        .design-check.active{
+            background: url('/assets/img/order-tracking/track-order-active-02.png') no-repeat center;
+        }
+
+        .production.active{
+            background: url('/assets/img/order-tracking/track-order-active-03.png') no-repeat center;
+        }
+
+        .quality-control.active{
+            background: url('/assets/img/order-tracking/track-order-active-04.png') no-repeat center;
+        }
+
+        .shipping-order.active{
+            background: url('/assets/img/order-tracking/track-order-active-05.png') no-repeat center;
+        }
+
+        .order-delivered.active{
+            background: url('/assets/img/order-tracking/track-order-active-06.png') no-repeat center;
+        }
+    }
+
+    .card-order-tracking{
+        .card-content{
+            background: #FAFAFA;
+        }
+    }
+
+    .section-cta{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: $screen-sm-max){
+    .order-tracking{
+        .main-raised{
+            margin: -54vh 0px 10px;
+            padding: 10px 15px;
+
+            @include shadow-2dp();
+        }
+    }
+}
+
+@media (max-width: $screen-md-max){
+    .order-tracking{
+        .track-order-container{
+            display: none;
+        }
+    }
+}
+
