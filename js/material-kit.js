@@ -162,7 +162,36 @@ var big_image;
       navbar_initialized: false,
       isWindow: document.documentMode || /Edge/.test(navigator.userAgent)
     },
-
+    convertPrintImg: function(product, canvas, side){
+      var canvasParse = canvas.toDataURL('png');
+      if(side == "front"){
+        var canvas = document.getElementById('frontPrint');
+      }else{
+        var canvas = document.getElementById('backPrint');
+      }
+      canvas.width = 593;
+      canvas.height = 593;
+      var context = canvas.getContext('2d');
+      //Put design
+      var img1 = loadImage(product, main);
+      var img2 = loadImage(canvasParse, main);
+      var imagesLoaded = 0;
+      function main() {
+          imagesLoaded += 1;
+          if(imagesLoaded == 2) {
+              context.save();
+              context.drawImage(img1, 0, 0, 592, 592);
+              context.drawImage(img2, 175, 150, 252, 356);
+              context.restore();
+          }
+      }
+      function loadImage(src, onload) {
+          var img = new Image();
+          img.onload = onload;
+          img.src = src;
+          return img;
+      }
+    },
     initAtvImg: function () {
       $('.card-atv').each(function () {
         var $atv_div = $(this).find('.atvImg');
