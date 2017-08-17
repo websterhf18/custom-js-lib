@@ -153,47 +153,10 @@
                     height: 32px;
                     margin: 0;
                     padding: 0;
-
-                    &[data-color="blanco"]{
-                        background-color: #FFFFFF;
-                        &.active{
-                            &:after{
-                                color: $gray-color;
-                            }
+                    &.active{
+                        &:after{
+                            color: $white-color;
                         }
-                    }
-
-                    &[data-color="gris"]{
-                        background-color: #666e75;
-                    }
-
-                    &[data-color="negro"]{
-                        background-color: #212121;
-                    }
-
-                    &[data-color="amarillo"]{
-                        background-color: #FFEE55;
-                        &.active{
-                            &:after{
-                                color: $gray-color;
-                            }
-                        }
-                    }
-
-                    &[data-color="naranja"]{
-                        background-color: #FC581C;
-                    }
-
-                    &[data-color="verde"]{
-                        background-color: #469956;
-                    }
-
-                    &[data-color="rojo"]{
-                        background-color: #CF152D;
-                    }
-
-                    &[data-color="azul"]{
-                        background-color: #204590;
                     }
 
                     &:after{
