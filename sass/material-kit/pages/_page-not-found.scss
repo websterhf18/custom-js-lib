@@ -1,4 +1,4 @@
-.page-not-found{
+&.page-not-found{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,6 +7,10 @@
     z-index: 1;
     background: #0D0C1E;
     overflow: hidden;
+
+    app-root{
+        background-color: transparent;
+    }
 
     .content{
         text-align: center;
