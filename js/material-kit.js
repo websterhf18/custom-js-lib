@@ -284,6 +284,16 @@ var big_image;
         ]
       });
     },
+    initScrollTo: function () {
+       $('body').scrollspy({target: '#sidebar', offset: 150});
+       $('body').scrollspy('refresh');
+
+       $('#sidebar').localScroll({
+           duration: 500,
+           hash: true,
+           offset: -80
+       });
+    },
     initNotFound: function () {
 
          var lFollowX = 0,
