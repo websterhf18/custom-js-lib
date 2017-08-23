@@ -325,7 +325,15 @@
         // width: 615px;
         // height: 615px;
         position: relative;
-
+        .design-print{
+            height: 60%;
+            width: 42%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 17.5%;
+            position: absolute;  
+        }
         .design-area{
             height: 100%;
             width: 100%;
