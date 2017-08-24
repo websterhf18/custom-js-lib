@@ -29,38 +29,38 @@ $(document).ready(function(){
 
     // Code for the Validator
     /**var $validator = $('.wizard-card form').validate({
-		  rules: {
-		    firstname: {
-		      required: true,
-		      minlength: 3
-		    },
-		    lastname: {
-		      required: true,
-		      minlength: 3
-		    },
-		    email: {
-		      required: true,
-		      minlength: 3,
-		    }
+          rules: {
+            firstname: {
+              required: true,
+              minlength: 3
+            },
+            lastname: {
+              required: true,
+              minlength: 3
+            },
+            email: {
+              required: true,
+              minlength: 3,
+            }
         },
 
         errorPlacement: function(error, element) {
             $(element).parent('div').addClass('has-error');
          }
-	});**/
+    });**/
 
     // Wizard Initialization
-  	$('.wizard-card').bootstrapWizard({
+    $('.wizard-card').bootstrapWizard({
         'tabClass': 'nav nav-pills',
         'nextSelector': '.btn-next',
         'previousSelector': '.btn-previous',
 
         onNext: function(tab, navigation, index) {
-        	var $valid = $('.wizard-card form').valid();
-        	if(!$valid) {
-        		$validator.focusInvalid();
-        		return false;
-        	}
+            var $valid = $('.wizard-card form').valid();
+            if(!$valid) {
+                $validator.focusInvalid();
+                return false;
+            }
         },
 
         onInit : function(tab, navigation, index){
@@ -125,7 +125,7 @@ $(document).ready(function(){
 
             refreshAnimation($wizard, index);
         }
-  	});
+    });
 
 
     // Prepare the preview for profile picture
@@ -240,20 +240,97 @@ materialDesign = {
                         $('.navbar-color-on-scroll').addClass('navbar-transparent');
                     }
                 }
-        }, 17)
+        }, 17),
+    reloadWizard: function(){
+        $('.wizard-card').bootstrapWizard({
+            'tabClass': 'nav nav-pills',
+            'nextSelector': '.btn-next',
+            'previousSelector': '.btn-previous',
 
+            onNext: function(tab, navigation, index) {
+                var $valid = $('.wizard-card form').valid();
+                if(!$valid) {
+                    $validator.focusInvalid();
+                    return false;
+                }
+            },
+
+            onInit : function(tab, navigation, index){
+                //check number of tabs and fill the entire row
+                var $total = navigation.find('li').length;
+                var $wizard = navigation.closest('.wizard-card');
+
+                $first_li = navigation.find('li:first-child a').html();
+                $moving_div = $('<div class="moving-tab">' + $first_li + '</div>');
+                $('.wizard-card .wizard-navigation').append($moving_div);
+
+                refreshAnimation($wizard, index);
+
+                $('.moving-tab').css('transition','transform 0s');
+           },
+
+            onTabClick : function(tab, navigation, index){
+                var $valid = $('.wizard-card form').valid();
+
+                if(!$valid){
+                    return false;
+                } else{
+                    return true;
+                }
+            },
+
+            onTabShow: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index+1;
+
+                var $wizard = navigation.closest('.wizard-card');
+
+                // If it's the last tab then hide the last button and show the finish instead
+                if($current >= $total) {
+                    $($wizard).find('.btn-next').hide();
+                    $($wizard).find('.btn-finish').show();
+                } else {
+                    $($wizard).find('.btn-next').show();
+                    $($wizard).find('.btn-finish').hide();
+                }
+
+                button_text = navigation.find('li:nth-child(' + $current + ') a').html();
+
+                setTimeout(function(){
+                    $('.moving-tab').text(button_text);
+                }, 150);
+
+                var checkbox = $('.footer-checkbox');
+
+                if( !index == 0 ){
+                    $(checkbox).css({
+                        'opacity':'0',
+                        'visibility':'hidden',
+                        'position':'absolute'
+                    });
+                } else {
+                    $(checkbox).css({
+                        'opacity':'1',
+                        'visibility':'visible'
+                    });
+                }
+
+                refreshAnimation($wizard, index);
+            }
+        });
+    }
 }
 
 function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		clearTimeout(timeout);
-		timeout = setTimeout(function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		}, wait);
-		if (immediate && !timeout) func.apply(context, args);
-	};
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
+    };
 };
 })(jQuery); 
