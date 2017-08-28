@@ -259,13 +259,13 @@
         // height: 615px;
         position: relative;
         .design-print{
-            height: 60%;
-            width: 42%;
+            height: 100%;
+            width: 100%;
             left: 0;
             right: 0;
             margin: auto;
-            top: 27.5%;
-            position: absolute;  
+            top: 0;
+            position: absolute;
         }
         .design-area{
             height: 100%;
@@ -292,12 +292,12 @@
             .content-area{
                 position: relative;
                 margin:0 auto;
-                top: 27.5%;
+                //top: 27.5%;
             }
             .canvas-container{
                 position: relative;
                 margin:0 auto;
-                top: 27.5%;
+                //top: 27.5%;
             }
             .content-helper{
                 overflow: hidden;
@@ -326,12 +326,12 @@
         // height: 615px;
         position: relative;
         .design-print{
-            height: 60%;
-            width: 42%;
+            height: 100%;
+            width: 100%;
             left: 0;
             right: 0;
             margin: auto;
-            top: 17.5%;
+            top: 0;
             position: absolute;  
         }
         .design-area{
@@ -355,12 +355,12 @@
             .content-area{
                 position: relative;
                 margin:0 auto;
-                top: 17.5%;
+                //top: 17.5%;
             }
             .canvas-container{
                 position: relative;
                 margin:0 auto;
-                top: 17.5%;
+                //top: 17.5%;
             }
 
             .content-helper{
