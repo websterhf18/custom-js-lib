@@ -181,7 +181,7 @@ var big_image;
           if(imagesLoaded == 2) {
               context.save();
               context.drawImage(img1, 0, 0, 592, 592);
-              context.drawImage(img2, 175, 150, 252, 356);
+              context.drawImage(img2, 0, 0, 592, 592);
               context.restore();
           }
       }
