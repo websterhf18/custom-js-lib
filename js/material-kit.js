@@ -162,8 +162,8 @@ var big_image;
       navbar_initialized: false,
       isWindow: document.documentMode || /Edge/.test(navigator.userAgent)
     },
-    convertPrintImg: function(product, canvas, side){
-      var canvasParse = canvas.toDataURL('png');
+    convertPrintImg: function(product, canvasPNG, side){
+      //var canvasParse = canvas.toDataURL('png');
       if(side == "front"){
         var canvas = document.getElementById('frontPrint');
       }else{
@@ -174,7 +174,7 @@ var big_image;
       var context = canvas.getContext('2d');
       //Put design
       var img1 = loadImage(product, main);
-      var img2 = loadImage(canvasParse, main);
+      var img2 = loadImage(canvasPNG, main);
       var imagesLoaded = 0;
       function main() {
           imagesLoaded += 1;
