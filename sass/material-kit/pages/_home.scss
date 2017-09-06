@@ -118,8 +118,6 @@
 
     .section-allincluded,
     .section-art{
-        padding-top: 40px;
-        padding-bottom: 40px;
         border-bottom: 1px solid #EEEEEE;
 
         .title{
@@ -144,6 +142,16 @@
                 }
             }
         }
+
+        .image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .section-allincluded{
+        padding: 100px 0;
     }
 
     .section-art{
