@@ -12,6 +12,7 @@
  * ========================================================= */
 
 var big_image;
+
 (function ($) {
   $(document).ready(function () {
 

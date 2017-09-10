@@ -503,6 +503,7 @@
         padding: 5px 10px 10px;
 
         .bg-colors{
+            cursor: pointer;
             position: relative;
             display: block;
             border-radius: $border-radius-extreme;
@@ -809,8 +810,8 @@
     /* --- </POPOVER ADD ART --- */
     .popover-add-art{
         position: absolute;
-        top: 255px;
-        left: 23%;
+        top: 35%;
+        right: 62%;
         width: 188px;
 
         .card{
@@ -941,6 +942,9 @@
             &.active{
                 border-color: $brand-info;
                 background-color: rgba(133, 216, 253, 0.2);
+                .product-variation__col{
+                    opacity: 1;
+                }
             }
 
             &:first-child{
@@ -958,6 +962,7 @@
             .product-variation__col{
                 padding: 5px 15px;
                 position: relative;
+                opacity: 0.5;
             }
 
             .form-group{
@@ -1046,7 +1051,7 @@
                     .bg-colors{
                         height: 25px;
                         width: 25px;
-
+                        
                         &.active{
                             &:before{
                                 font-size: 20px;
