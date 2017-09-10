@@ -64,7 +64,7 @@
                 height: 55px !important;
                 min-width: 55px !important;
                 width: 55px !important;
-
+                box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
                 .material-icons{
                     font-size: 24px !important;
                 }
@@ -541,9 +541,9 @@
     /* --- <POPOVER ADD TEXT --- */
     .popover-add-text{
         position: absolute;
-        top: 235px;
-        left: 10%;
-        width: 340px;
+        top: 35%;
+        left: 7%;
+        width: 29%;
         height: auto;
 
         &:after{
