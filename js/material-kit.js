@@ -286,6 +286,28 @@ var big_image;
         ]
       });
     },
+    initGoToPAYU: function () {
+      $('body').block({
+        message: "Thank you for your order. We are now redirecting you to PayU Latam to make payment.",
+        baseZ: 99999,
+        overlayCSS:
+        {
+          background: "#fff",
+          opacity: 0.6
+        },
+        css: {
+              padding:        "20px",
+              zindex:         "9999999",
+              textAlign:      "center",
+              color:          "#555",
+              border:         "3px solid #aaa",
+              backgroundColor:"#fff",
+              cursor:         "wait",
+              lineHeight:   "24px",
+          }
+      });
+      $('#submit_payulatam_payment_form').click();
+    },
     initScrollTo: function () {
        $('body').scrollspy({target: '#sidebar', offset: 150});
        $('body').scrollspy('refresh');
