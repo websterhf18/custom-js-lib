@@ -1,0 +1,129 @@
+.edit-product-modal{
+  .modal-dialog{
+    margin-top: 20px;
+  }
+
+  .modal-header {
+    .modal-title{
+
+    }
+  }
+
+  .modal-content{
+    .modal-header{
+
+    }
+  }
+
+  .modal-body{
+    .publishProductForm{
+      .form-group{
+        padding-bottom: 0;
+        margin: 0;
+
+        h5{
+          margin: 0;
+          line-height: 1.1625em;
+        }
+
+        label.control-label{
+          font-size: $font-size-h5;
+          line-height: 1.55em;
+          color: $black-color;
+          font-weight: $font-weight-bold;
+          margin: 10px 0 0 0;
+        }
+
+        .form-control{
+          margin: 10px 0;
+          padding: 10px;
+          border-radius: $border-radius-base;
+          border: 1px solid $table-border-color;
+          background: $white-color;
+          @include transition($fast-transition-time, $transition-linear);
+        }
+
+        &.is-focused{
+          .form-control{
+            border-color: $brand-info;
+          }
+        }
+
+        &.has-error{
+          .form-control{
+            border-color: $brand-danger;
+          }
+        }
+
+        &.has-success{
+          .form-control{
+            border-color: $brand-success;
+          }
+        }
+
+        textarea{
+          height: 100px;
+        }
+
+        .bootstrap-select{
+          margin-bottom: 15px;
+
+          .dropdown-toggle{
+            text-transform: none;
+            padding: 12px 15px;
+            background-color: #ebf1f2;
+            color: #555555;
+          }
+        }
+
+        .category-arrow{
+          position: absolute;
+          right: -25px;
+          top: 20px;
+          font-size: 18px;
+        }
+
+        .set-url-input-group{
+          margin-top: 10px;
+          margin-bottom: 10px;
+
+          .input-group-addon{
+            border: 1px solid $table-border-color;
+            background: $gray-lighter;
+            padding: 0 15px 0px;
+          }
+
+          .form-control{
+            margin-top: 0;
+            margin-bottom: 0;
+            border-left: 0;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+          }
+        }
+      }
+    }
+
+    .product-design{
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .modal-footer{
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  .edit-product-modal{
+    .modal-dialog{
+
+      .modal-body{
+
+      }
+    }
+  }
+}

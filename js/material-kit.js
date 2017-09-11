@@ -183,6 +183,7 @@ var big_image;
               context.save();
               context.drawImage(img1, 0, 0, 592, 592);
               context.drawImage(img2, 0, 0, 592, 592);
+              context.imageSmoothingQuality = 'high';
               context.restore();
           }
       }
