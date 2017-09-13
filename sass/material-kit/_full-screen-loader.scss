@@ -88,3 +88,54 @@
 		}
 	}
 }
+.desktop-only-warning{
+	.bg-colors{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #FF7043;
+		animation: random-bg 20s linear infinite;
+		opacity: 0.8;
+		z-index: 999999;
+	}
+
+	.desktop-only-wrap{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 999999;
+	}
+
+	@keyframes random-bg {
+		0% { filter: hue-rotate(180deg); }
+		50% { filter: hue-rotate(240deg); }
+		100% { filter: hue-rotate(180deg); }
+	}
+
+	.desktop-logo{
+		margin-top: 40px;
+	}
+
+	.desktop-only-title{
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 767px){
+	.desktop-only-warning{
+		display: none !important;
+	}
+}
+
+@media (max-width: 320px){
+	.desktop-only-warning{
+		.desktop-logo{
+			margin-top: 20px;
+		}
+	}
+}
