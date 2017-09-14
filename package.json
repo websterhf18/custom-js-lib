@@ -1,6 +1,6 @@
 {
   "name": "custom-js-lib",
-  "version": "5.1.26",
+  "version": "5.1.27",
   "description": "this is custom-libs to projects",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
