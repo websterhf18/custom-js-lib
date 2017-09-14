@@ -229,10 +229,11 @@ var big_image;
         autoplay: !0,
         autoplaySpeed: 4e3
       });
-
       $('#center-slider').slick({
         centerMode: true,
         centerPadding: '60px',
+        autoplay: true,
+        autoplaySpeed: 3000,
         slidesToShow: 1,
         infinite: true,
         variableWidth: true,
@@ -245,7 +246,7 @@ var big_image;
           {
             breakpoint: 768,
             settings: {
-              arrows: false,
+              arrows: !0,
               centerMode: true,
               centerPadding: '40px',
               slidesToShow: 1,
@@ -253,10 +254,6 @@ var big_image;
               variableWidth: true,
               variableHeight: true
             }
-          },
-          {
-            breakpoint: 480,
-            settings: "unslick"
           }
         ]
       });

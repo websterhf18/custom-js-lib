@@ -54,7 +54,7 @@
     }
 
     .main-raised{
-        margin: -160px 30px 0px;
+        margin: -90px 30px 0px;
     }
 
     .header-filter:after{
@@ -65,6 +65,8 @@
     }
 
     .section-ideas{
+        padding-top: 130px;
+        padding-bottom: 130px;
         border-bottom: 1px solid #EEEEEE;
 
         .title{
@@ -75,44 +77,16 @@
             margin-top: 0;
         }
 
-        .computer-slider{
-            .content{
-                display: block;
-                background: #fff;
-                position: absolute;
-                left: 100px;
-                right: 101px;
-                top: 27px;
-                bottom: 44px;
-                overflow: hidden;
-            }
+        .ideas-text-container{
+            width: 50%;
+        }
 
-            .slick-prev,
-            .slick-next{
-                position: absolute;
-                top: 50%;
-                margin-top: -30px;
-                color: #666e75;
-                line-height: 60px;
-                text-decoration: none;
-
-                i{
-                    font-size: 60px;
-                }
-            }
-
-            .slick-prev:hover,
-            .slick-next:hover{
-                color: #ff7043;
-            }
-            
-            .slick-prev {
-                left: 20px;
-            }
-            
-            .slick-next {
-                right: 20px;
-            }
+        .image-laptop{
+            position: absolute;
+            top: -80px;
+            right: 0;
+            width: 75%;
+            z-index: -1;
         }
     }
 
@@ -155,7 +129,8 @@
     }
 
     .section-art{
-        padding-top: 20px;
+        padding-top: 60px;
+        padding-bottom: 80px;
         border-bottom: none;
 
         img{
@@ -226,6 +201,10 @@
     .section-testimonials{
         padding: 40px 0;
 
+        &:after{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
         .testimonials-slider{
             overflow: hidden;
 
@@ -269,92 +248,11 @@
     }
 }
 
-@media (max-width: 992px){
+@media (max-width: $screen-md-max){
     &.home{
-        .page-header{
-            .container{
-                .card-cta{
-                    margin-top: 20px;
-                    width: 80%;
-                    background: none;
-
-                    .card-content{
-                        padding: 0;
-
-                        .form-group{
-                            display: none;
-                        }
-                        
-                        .header-cta-btn{
-                            padding: 20px;
-                            border-radius: 33px;
-                            font-size: $font-paragraph;
-                            margin-left: 0;
-                        }
-                    }
-                }
-            }
-        }
-
-        .section-testimonials{
-            .container{
-                width: 100%;
-                padding-right: 0;
-                padding-left: 0;
-            }
-
-            .testimonials-slider{
-                .slick-slide{
-                    opacity: 0.8;
-                }
-
-                .slick-center{
-                    opacity: 1;
-                }
-
-                .slick-prev,
-                .slick-next{
-                    position: absolute;
-                    top: 60%;
-                    margin-top: -30px;
-                    color: #666e75;
-                    line-height: 40px;
-                    text-decoration: none;
-                    background: #FFFFFF;
-                    border-radius: 20px;
-                    z-index: 1;
-
-                    i{
-                        font-size: 40px;
-                    }
-                }
-
-                .slick-prev:hover,
-                .slick-next:hover{
-                    color: #ff7043;
-                }
-                
-                .slick-prev {
-                    left: 20px;
-                }
-                
-                .slick-next {
-                    right: 20px;
-                }
-            }
-
-            .icon{
-                i{
-                    font-size: 28px;
-                }
-            }
-
-            .card-content{
-                padding: 10px 30px;
-            }
-
-            .testimonial-data{
-                display: none;
+        .section-ideas{
+            .image-laptop{
+                top: 80px;
             }
         }
     }
@@ -387,8 +285,25 @@
                     }
                 }
 
-                .header-cta{
-                    margin-top: 0;
+                .card-cta{
+                    margin-top: 20px;
+                    width: 80%;
+                    background: none;
+
+                    .card-content{
+                        padding: 0;
+
+                        .form-group{
+                            display: none;
+                        }
+                        
+                        .header-cta-btn{
+                            padding: 20px;
+                            border-radius: 33px;
+                            font-size: $font-paragraph;
+                            margin-left: 0;
+                        }
+                    }
                 }
             }
         }
@@ -398,7 +313,15 @@
         }
 
         .section-ideas{
-            padding: 10px 0 20px;
+            padding: 25px 0 25px;
+
+            .ideas-text-container{
+                width: 100%;
+            }
+
+            .image-laptop{
+                display: none;
+            }
         }
 
         .section-allincluded{
@@ -477,6 +400,66 @@
 
         .section-testimonials{
             padding: 20px 0;
+
+            .container{
+                width: 100%;
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            .testimonials-slider{
+                .slick-slide{
+                    opacity: 0.8;
+                }
+
+                .slick-center{
+                    opacity: 1;
+                }
+
+                .slick-prev,
+                .slick-next{
+                    position: absolute;
+                    top: 60%;
+                    margin-top: -30px;
+                    color: #666e75;
+                    line-height: 40px;
+                    text-decoration: none;
+                    background: #FFFFFF;
+                    border-radius: 20px;
+                    z-index: 1;
+
+                    i{
+                        font-size: 40px;
+                    }
+                }
+
+                .slick-prev:hover,
+                .slick-next:hover{
+                    color: #ff7043;
+                }
+                
+                .slick-prev {
+                    left: 20px;
+                }
+                
+                .slick-next {
+                    right: 20px;
+                }
+            }
+
+            .icon{
+                i{
+                    font-size: 28px;
+                }
+            }
+
+            .card-content{
+                padding: 10px 30px;
+            }
+
+            .testimonial-data{
+                display: none;
+            }
         }
 
         .section-sell{
