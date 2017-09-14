@@ -27,6 +27,7 @@ var big_image;
     $navbar_collapse = $('.navbar').find('.navbar-collapse');
     
     $(".noclick").click(function (e) {
+        e.stopPropagation();
         e.preventDefault();
         return false;
     });
