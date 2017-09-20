@@ -26,11 +26,11 @@ var big_image;
 
     $navbar_collapse = $('.navbar').find('.navbar-collapse');
     
-    $(".noclick").click(function (e) {
+    /**$(".noclick").click(function (e) {
         e.stopPropagation();
         e.preventDefault();
         return false;
-    });
+    });**/
     //  Activate the Tooltips
     $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
 

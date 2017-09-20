@@ -2,6 +2,7 @@
   "name": "custom-js-lib",
   "version": "5.1.28",
   "description": "this is custom-libs to projects",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
