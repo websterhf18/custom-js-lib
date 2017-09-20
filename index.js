@@ -1,6 +1,6 @@
 'use strict'
 
-require('../jquery/dist/jquery.min.js');
+require('./admin/js/jquery-3.1.1.min.js');
 require('../jquery-ui-dist/jquery-ui.min.js');
 require('./js/bootstrap.min.js');
 require('./js/material.min.js');
