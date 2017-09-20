@@ -1,4 +1,7 @@
 &.shop{
+    .navbar-nav {
+        margin: 7.5px -15px;
+    }
     .navbar{
         .navbar-nav{
             >li{
@@ -260,9 +263,33 @@
     }
 }
 
+@media (max-width: $screen-sm-min){
+    .edit-bg{
+       position: relative !important;
+    }
+}
 
 @media (max-width: $screen-sm-max){
     &.shop{
+        .slider-container {
+            .slider {
+                width: 160px !important;
+                bottom: -55px !important;
+                &::-webkit-slider-thumb {
+                  width: 20px !important;
+                  height: 20px !important;
+                  border-radius: 50% !important;
+                }
+            }
+            .range-arrow-down {
+                bottom: -165px !important;
+                right: 67px !important;
+            }
+            .range-arrow-up {
+                top: -55px !important;
+                right: 67px !important;
+            }
+        }
         .navbar{
             .navbar-toggle{
                 display: none !important;
