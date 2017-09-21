@@ -14,7 +14,7 @@ require('./admin/js/jquery.validate.min.js');
 require('./admin/js/chartist.min.js');
 require('./admin/js/bootstrap-notify.js');
 require('./admin/js/bootstrap-datetimepicker.js');
-require('./admin/js/nouislider.min.js');
+//require('./admin/js/nouislider.min.js');
 require('./admin/js/jquery.select-bootstrap.js');
 require('./admin/js/jquery.datatables.js');
 require('./admin/js/sweetalert2.js');
