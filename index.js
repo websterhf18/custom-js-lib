@@ -18,7 +18,7 @@ require('./admin/js/bootstrap-datetimepicker.js');
 require('./admin/js/jquery.select-bootstrap.js');
 require('./admin/js/jquery.datatables.js');
 require('./admin/js/sweetalert2.js');
-require('./admin/js/jasny-bootstrap.min.js');
+//require('./admin/js/jasny-bootstrap.min.js');
 require('./admin/js/fullcalendar.min.js');
 //require('./admin/js/jquery.tagsinput.js');
 require('./admin/js/material-dashboard.js');
