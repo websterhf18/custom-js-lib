@@ -113,7 +113,7 @@
 }
 @media (max-width: $screen-xs-max){
     app-root {
-        font-size: $font-size-small;
+        font-size: $font-size-small !important;
     }
 
     h1,

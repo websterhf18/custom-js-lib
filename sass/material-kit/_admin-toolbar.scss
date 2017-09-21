@@ -441,6 +441,9 @@
 }
 
 @media (max-width: $screen-md-max){
+    .hide-on-mobile{
+        display: none;
+    }
     .admin-bar-hide{
         #sectionsNav{
             margin-top: 40px;
