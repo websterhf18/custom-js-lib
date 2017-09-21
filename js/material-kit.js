@@ -69,7 +69,7 @@ var big_image;
     //});
     //Activate tags
     //removed class label and label-color from tag span and replaced with data-color
-    var tagClass = $('.tagsinput').data('color');
+    //var tagClass = $('.tagsinput').data('color');
 
     //$('.tagsinput').tagsinput({
     //    tagClass: ' tag-'+ tagClass +' '

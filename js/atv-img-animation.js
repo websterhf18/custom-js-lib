@@ -57,7 +57,7 @@
  * inspiration when creating this plug-in.
  */
 
- function debounceAtv(func, wait, immediate) {
+function debounceAtv(func, wait, immediate) {
  	var timeout;
  	return function() {
  		var context = this, args = arguments;
@@ -68,7 +68,7 @@
  		}, wait);
  		if (immediate && !timeout) func.apply(context, args);
  	};
- };
+};
 
 function atvImg(){
 
@@ -229,5 +229,4 @@ function atvImg(){
 
 
 	}
-
 }
