@@ -1,6 +1,6 @@
 {
   "name": "custom-js-lib",
-  "version": "5.1.31",
+  "version": "5.1.32",
   "description": "this is custom-libs to projects",
   "main": "index.js",
   "scripts": {
